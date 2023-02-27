@@ -29,7 +29,7 @@ const Card = ({ item }) => {
       </div>
       <div className='text-left w-full'>
         {item?.stats.map((item, idx) => (
-          <div key={idx} className='py-1 uppercase grid grid-cols-12'>
+          <div key={idx} className='py-1 uppercase grid grid-cols-12 items-center'>
             <div className='col-span-12 md:col-span-5 text-sm'>
               {item?.stat?.name}
             </div>
