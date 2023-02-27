@@ -9,7 +9,6 @@ function Home() {
       </header>
       <Link
         to={'/products'} 
-        type="button"
         className='appearance-none drop-shadow-md hover:drop-shadow-lg transition-all duration-200 bg-amber-400 hover:bg-amber-300 px-3 py-2 rounded'
       >
         Explore Pokémons
