@@ -3,6 +3,6 @@ import App from '../../router/routes';
 
 it('Home buttons load correctly', () => {
   render(<App />);
-  const linkToProducts = screen.getByText(/Explore Pokémons/i)
+  const linkToProducts = screen.getByRole('link', /Explore Pokémons/i)
   expect(linkToProducts).toBeInTheDocument();
 });
