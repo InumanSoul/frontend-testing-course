@@ -12,6 +12,15 @@ describe('Products page', () => {
     expect(productPage).toBeVisible()
   })
 
+  it('Search products', () => {
+    render(<App />);
+    screen.getByPlaceholderText(/Search/i)
+    userEvent.type('bulb')
+    const sendButton = screen.getByRole('button', /search/i)
+    userEvent.click(sendButton)
+    expect(screen.getByText(/bulbasaur/i)).toBeInTheDocument()
+  })
+
   it('See the product detail correctly', async () => {
     render(<App />);
     const listItem = await screen.findByText(/bulbasaur/i)

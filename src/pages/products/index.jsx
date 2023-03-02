@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { getProducts } from '../../api/api'
-import Breadcrumb from '../../components/Card/Breadcrumb/Breadcrumb'
+import Breadcrumb from '../../components/Breadcrumb/Breadcrumb'
+import Title from '../../components/Title/title'
 
 const Products = () => {
-  const [products, setProducts] = useState('')
+  const [products, setProducts] = useState(null)
   const [searchInput, setSearchInput] = useState('')
   const [filtered, setFiltered] = useState(null)
   
@@ -27,7 +28,7 @@ const Products = () => {
       <Breadcrumb elements={["products"]}/>
       <div className='md:max-w-xl md:mx-auto'>
 
-        <h1 className='text-4xl mt-12'>Products page</h1>
+        <Title>Products page</Title>
         <p>This is the products list page</p>
         <div className='my-6 w-full flex'>
           <input 

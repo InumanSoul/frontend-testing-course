@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import {getProduct } from '../../api/api'
-import Breadcrumb from '../../components/Card/Breadcrumb/Breadcrumb'
+import Breadcrumb from '../../components/Breadcrumb/Breadcrumb'
 import Card from '../../components/Card/Card'
 
 const ProductDetail = () => {
