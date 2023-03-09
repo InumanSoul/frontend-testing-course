@@ -11,7 +11,7 @@ const Contact = () => {
     setMessage('Your message was sended')
     setTimeout(() => {
       setMessage(null)
-    }, 4000)
+    }, 5000)
   }
   return (
     <div className='px-6 py-2'>
@@ -25,15 +25,15 @@ const Contact = () => {
         <form ref={formRef} className='mt-5'>
           <div className='flex flex-col mb-3'>
             <label htmlFor='name' className='font-bold text-sm'>Name</label>
-            <input type='text' name='name' placeholder='Your name' className='border border-slate-400 rounded px-2 py-2'/>
+            <input id='name' type='text' name='name' placeholder='Your name' className='border border-slate-400 rounded px-2 py-2'/>
           </div>
           <div className='flex flex-col mb-3'>
-            <label htmlFor='name' className='font-bold text-sm'>Wish</label>
-            <input type='text' name='wish' placeholder='Tell us your wish' className='border border-slate-400 rounded px-2 py-2'/>
+            <label htmlFor='wish' className='font-bold text-sm'>Wish</label>
+            <input id='wish' type='text' name='wish' placeholder='Tell us your wish' className='border border-slate-400 rounded px-2 py-2'/>
           </div>
           <div className='flex flex-col mb-3'>
-            <label htmlFor='name' className='font-bold text-sm'>Message</label>
-            <textarea type='text' name='message' placeholder='Your name' className='border border-slate-400 rounded px-2 py-2'></textarea>
+            <label htmlFor='message' className='font-bold text-sm'>Message</label>
+            <textarea id='message' type='text' name='message' placeholder='Your mesage' className='border border-slate-400 rounded px-2 py-2'></textarea>
           </div>
           <button 
             onClick={e => handleSubmit(e)}
