@@ -15,7 +15,7 @@ const Products = () => {
   }
 
   const filterProducts = () => {
-    const filtered = products.results.filter(element => element.name.includes(searchInput))
+    const filtered = products?.results.filter(element => element.name.includes(searchInput))
     setFiltered(filtered)
   }
 
@@ -35,6 +35,7 @@ const Products = () => {
             name='search'
             type={'search'}
             placeholder='Search...'
+            aria-label='Search'
             value={searchInput}
             onChange={(e) => setSearchInput(e.target.value)}
             className='w-full border rounded-l-lg px-2 py-1 border-slate-400 focus:outline-offset-2 focus:outline-2'

@@ -33,7 +33,7 @@ const Contact = () => {
           </div>
           <div className='flex flex-col mb-3'>
             <label htmlFor='message' className='font-bold text-sm'>Message</label>
-            <textarea id='message' type='text' name='message' placeholder='Your mesage' className='border border-slate-400 rounded px-2 py-2'></textarea>
+            <textarea id='message' type='text' name='message' placeholder='Your message' className='border border-slate-400 rounded px-2 py-2'></textarea>
           </div>
           <button 
             onClick={e => handleSubmit(e)}
