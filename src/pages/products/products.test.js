@@ -12,7 +12,7 @@ describe('Products page', () => {
   })
 
   it('Search product', async () => {
-    render(<MemoryRouter><Products/></MemoryRouter>);
+    render(<MemoryRouter><Products/></MemoryRouter>)
     const search = screen.getByLabelText('Search')
     userEvent.type(search, 'bulb')
     const sendButton = screen.getByRole('button', /search/i)
@@ -22,7 +22,7 @@ describe('Products page', () => {
   })
 
   it('See the product detail correctly', async () => {
-    render(<MemoryRouter><Products/></MemoryRouter>);
+    render(<MemoryRouter><Products/></MemoryRouter>)
     const listItem = await screen.findByText(/bulbasaur/i)
     userEvent.click(listItem)
     expect(screen.getByText(/bulbasaur/i)).toBeInTheDocument()
